@@ -19,5 +19,5 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: ddnss-key
-                  key: key
+                  key: ddnss-key
           restartPolicy: OnFailure
