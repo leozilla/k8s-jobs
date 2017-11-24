@@ -10,10 +10,10 @@ spec:
         spec:
           containers:
           - name: update-davidhome-ddnss
-            image: busybox
+            image: resin/rpi-raspbian
             args:
-            - /bin/sh
-            - curl -X GET 'https://ddnss.de/upd.php?key=$SECRET_DDNSS_KEY&host=davidhome.ddnss.org'
+            - curl
+            - 'https://ddnss.de/upd.php?key=$SECRET_DDNSS_KEY&host=davidhome.ddnss.org'
             env:
             - name: SECRET_DDNSS_KEY
               valueFrom:
